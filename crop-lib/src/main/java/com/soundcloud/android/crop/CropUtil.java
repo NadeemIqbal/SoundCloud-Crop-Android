@@ -27,6 +27,7 @@ import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 
+
 import androidx.annotation.Nullable;
 
 import java.io.Closeable;
@@ -44,7 +45,7 @@ class CropUtil {
     private static final String SCHEME_FILE = "file";
     private static final String SCHEME_CONTENT = "content";
 
-    public static void closeSilently(@Nullable Closeable c) {
+    public static void closeSilently(@org.jetbrains.annotations.Nullable Closeable c) {
         if (c == null) return;
         try {
             c.close();
